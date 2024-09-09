@@ -3,7 +3,7 @@ extra_server_args: ""
 
 k3s_kubectl_binary: k3s kubectl
 
-group_name_master: master
+group_name_master: k8spis
 
 kube_vip_arp: true
 kube_vip_iface:

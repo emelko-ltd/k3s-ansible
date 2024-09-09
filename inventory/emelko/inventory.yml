@@ -1,0 +1,29 @@
+superpi:
+  hosts:
+    setupi:
+      ansible_host: setupi.k8s.emelko.net
+
+k8spis:
+  hosts:
+    pi5:
+      ansible_host: pi5.k8s.emelko.net
+    pi4a:
+      ansible_host: pi4a.k8s.emelko.net
+    pi4b:
+      ansible_host: pi4b.k8s.emelko.net
+
+nodes:
+  hosts:
+    pi5:
+      ansible_host: pi5.k8s.emelko.net
+
+k3s_cluster:
+  children:
+    k8spis:
+    nodes:
+
+
+pis:
+  children:
+    superpi:
+    k8spis:
